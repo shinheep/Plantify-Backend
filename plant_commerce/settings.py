@@ -82,6 +82,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'plant_commerce',
+        'USER': 'yjskqhthkahpbh',
+        'PASSWORD': '90a3b97fd97f451f8bd43be17efa3ecc2a1c9d2dcda25562e470815e75f3e1b9',
+        'HOST': 'ec2-3-91-135-72.compute-1.amazonaws.com',
+        'PORT': '5432',
+
     }
 }
 
