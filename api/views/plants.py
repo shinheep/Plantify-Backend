@@ -31,7 +31,7 @@ class PlantView(APIView):
         plant = get_object_or_404(Plant, pk=pk)
         # Check the mango's owner against the user making this request
         if request.user != plant.author:
-            raise PermissionDenied('Unauthorized, you do not own this mango')
+            raise PermissionDenied('Unauthorized, you do not own this plant!')
         plant.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
     
