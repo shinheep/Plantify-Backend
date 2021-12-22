@@ -44,7 +44,7 @@ class PlantView(APIView):
         plant = get_object_or_404(Plant, pk=pk)
         # Check the mango's owner against the user making this request
         if request.user != plant.author:
-            raise PermissionDenied('Unauthorized, you do not own this mango')
+            raise PermissionDenied('Unauthorized, you do not own this plant!')
         # Ensure the owner field is set to the current user's ID
         request.data['author'] = request.user.id
         updated_plant = PlantSerializer(plant, data=request.data)
